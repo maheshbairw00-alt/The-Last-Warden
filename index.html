@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Last Warden</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button type="button" id="start">शुरू करने के लिए टैप करें</button>
+<button type="button" id="mute">🔊 म्यूज़िक</button>
+<audio id="music" src="assets/music.wav" loop preload="auto"></audio>
+<main>
+  <h1 class="logo">The Last Warden</h1>
+  <section id="loading">
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"><div id="fill"></div></div>
+    <p id="percent">Loading... 0%</p>
+    <p class="tip">रात होने से पहले आग जला लो।</p>
+  </section>
+  <section id="login" hidden>
+    <button type="button" data-provider="google">Gmail से लॉगिन</button>
+    <button type="button" data-provider="facebook">Facebook से लॉगिन</button>
+    <button type="button" data-provider="guest">Guest के रूप में खेलें</button>
+    <p id="status" aria-live="polite"></p>
+  </section>
+</main>
+<div id="lobby" hidden>
+  <div class="profile" id="player">Player</div>
+  <h2>The Last Warden</h2>
+  <img class="scene" src="assets/camp.svg" alt="कैंप में आग के पास खड़ा किरदार">
+  <nav>
+    <button type="button" data-menu="Inventory">Inventory</button>
+    <button type="button" data-menu="Friends">Friends</button>
+    <button type="button" data-menu="Shop">Shop</button>
+    <button type="button" data-menu="Settings">Settings</button>
+  </nav>
+  <button type="button" id="play">PLAY</button>
+  <p id="note" aria-live="polite"></p>
+</div>
+<script src="login.js"></script>
+<script src="lobby.js"></script>
+<script src="app.js"></script>
+<script src="loading.js"></script>
+</body>
+</html>
