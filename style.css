@@ -1,5 +1,5 @@
 *{margin:0;padding:0;box-sizing:border-box}
-body{height:100vh;height:100dvh;overflow:hidden;background:#0e1513 url(background.svg) center/cover no-repeat;color:#eee6d3;font-family:serif;text-align:center}
+body{height:100vh;height:100dvh;overflow:hidden;background:url(loading-bg.png) center top/cover no-repeat,#0e1513 url(background.svg) center/cover no-repeat;color:#eee6d3;font-family:serif;text-align:center}
 main{height:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:4vh max(6vw,env(safe-area-inset-right)) 5vh max(6vw,env(safe-area-inset-left))}
 .logo{max-height:38vh;max-width:50vw}
 section{width:min(70vw,900px);text-shadow:0 2px 4px #000}
@@ -21,3 +21,10 @@ nav{position:absolute;right:max(4vw,env(safe-area-inset-right));top:18vh;display
 nav button{width:22vw}
 #play{position:absolute;right:max(4vw,env(safe-area-inset-right));bottom:5vh;width:26vw;height:18vh;background:#c9620f;font-size:8vh;font-weight:bold}
 #note{position:absolute;left:4vw;bottom:4vh}
+#lobby.photo{background:url(lobby-bg.png) center 40%/cover no-repeat}
+#lobby.photo .scene{display:none}
+nav{top:17vh;bottom:27vh;gap:1.5vh}
+nav button{flex:1;height:auto;min-height:0;max-height:12vh;line-height:1}
+#play{height:18vh;bottom:4vh}
+#rotate{display:none}
+@media (orientation:portrait){#rotate{display:flex;position:fixed;inset:0;z-index:2;align-items:center;justify-content:center;background:#0e1513;font-size:7vw}}
