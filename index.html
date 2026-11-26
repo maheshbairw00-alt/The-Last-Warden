@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Last Warden</title>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=5">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.2.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
 <button type="button" id="start">शुरू करने के लिए टैप करें</button>
@@ -28,7 +29,9 @@
 <div id="lobby" hidden>
   <div class="profile" id="player">Player</div>
   <h2>The Last Warden</h2>
-  <img class="scene" src="camp.svg" alt="कैंप में आग के पास खड़ा किरदार">
+  <model-viewer id="hero" src="character.glb" alt="Viking योद्धा का 3D करेक्टर" loading="eager" camera-controls disable-zoom disable-pan disable-tap interaction-prompt="none" camera-orbit="0deg 85deg 105%" min-camera-orbit="auto 85deg auto" max-camera-orbit="auto 85deg auto" environment-image="neutral" exposure="1.6" shadow-intensity="1" touch-action="none"></model-viewer>
+  <p id="hero-status" aria-live="polite">करेक्टर लोड हो रहा है...</p>
+  <p id="credit"><a href="https://sketchfab.com/search?q=Viking+Medieval+Game+Character+CGenesis&amp;type=models" target="_blank" rel="noopener">Viking/Medieval Game Character</a> by CGenesis, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Textures compressed.</p>
   <nav>
     <button type="button" data-menu="Inventory">Inventory</button>
     <button type="button" data-menu="Friends">Friends</button>
@@ -39,7 +42,7 @@
   <p id="note" aria-live="polite"></p>
 </div>
 <script src="login.js"></script>
-<script src="lobby.js?v=3"></script>
+<script src="lobby.js?v=5"></script>
 <script src="app.js"></script>
 <script src="loading.js"></script>
 </body>
